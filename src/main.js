@@ -3,7 +3,7 @@ import { createPinia } from 'pinia' // Import
 
 import App from './App.vue'
 
-// import { router } from "./router";
+import router from './router'
 
 
 import PrimeVue from 'primevue/config';
@@ -114,8 +114,7 @@ import VirtualScroller from 'primevue/virtualscroller';
 const app = createApp(App);
 app.use(PrimeVue);
 app.use(createPinia()) // Create the root store
-
-// app.use(PrimeVue, { ripple: true });
+app.use(router)
 
 app.use(ConfirmationService);
 app.use(ToastService);
